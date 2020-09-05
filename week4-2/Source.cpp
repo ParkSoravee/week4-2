@@ -2,7 +2,6 @@
 #include<iostream>
 using namespace std;
 
-void setAllVals(int *);
 void getVals(int *, int);
 void showVals(int*, int);
 void sortVals(int*, int);
@@ -16,7 +15,6 @@ int main()
 	
 	cin >> n;
 
-	setAllVals(pNum);
 	getVals(pNum, n);
 	sortVals(pNum, n);
 	checkZero(pNum);
@@ -25,13 +23,6 @@ int main()
 	return 0;
 }
 
-void setAllVals(int *pNum)
-{
-	for (int i=0;i<1000;i++)
-	{
-		*(pNum + i) = -1;
-	}
-}
 void getVals(int *pNum, int n)
 {
 	for (int i=0;i<n;i++)
@@ -39,7 +30,6 @@ void getVals(int *pNum, int n)
 		cin >> *(pNum + i);
 	}
 }
-
 void showVals(int* pNum, int n)
 {
 	for (int i = 0; i < n; i++)
@@ -65,11 +55,6 @@ void sortVals(int* pNum, int n)
 }
 void checkZero(int* pNum)
 {
-	/*if (*pNum == 0)
-	{
-		*pNum = *(pNum + 1);
-		*(pNum + 1) = 0;
-	}*/
 	int i = 0;
 	while (*pNum == 0)
 	{
@@ -78,6 +63,5 @@ void checkZero(int* pNum)
 			*pNum = *(pNum + i);
 			*(pNum + i) = 0;
 		}
-
 	}
 }
