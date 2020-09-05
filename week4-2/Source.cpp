@@ -1,3 +1,4 @@
+//0032
 #include<iostream>
 using namespace std;
 
